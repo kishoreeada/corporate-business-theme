@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Contact Us | Stackly</title>
+
+    <meta
+      name="description"
+      content="Contact Stackly for web development, UI/UX design and digital solutions."
+    />
+
+    <meta
+      name="keywords"
+      content="Contact, Stackly, Corporate, Web Development"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container navbar">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/website-logo.png" alt="stackly-logo" />
+          </a>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+
+          <li><a href="about.html">About</a></li>
+
+          <li><a href="services.html">Services</a></li>
+
+          <li><a href="portfolio.html">Portfolio</a></li>
+
+          <li><a class="active" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-buttons">
+          <a href="404.html" class="login-btn"> Login </a>
+
+          <a href="contact.html" class="primary-btn"> Get Started </a>
+        </div>
+
+        <div class="menu-btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </header>
+
+    <!--================ HERO =================-->
+
+    <section class="hero">
+      <div class="container hero-container">
+        <div data-aos="fade-right">
+          <span class="hero-tag"> Contact Stackly </span>
+
+          <h1>Let's Build Something Amazing Together</h1>
+
+          <p>
+            We'd love to hear about your project. Contact our team today and
+            let's discuss your business goals.
+          </p>
+
+          <a href="#contact-form" class="primary-btn"> Send Message </a>
+        </div>
+
+        <div data-aos="fade-left">
+          <img src="images/contact/contact-hero.jfif" alt="Contact" />
+        </div>
+      </div>
+    </section>
+
+    <!--================ CONTACT FORM =================-->
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-subtitle"> Get In Touch </span>
+
+          <h2>Send Us A Message</h2>
+        </div>
+
+        <form id="contact-form">
+          <div class="service-grid">
+            <div>
+              <label>Full Name</label>
+
+              <input type="text" id="name" placeholder="Enter your name" />
+
+              <small id="nameError"></small>
+            </div>
+
+            <div>
+              <label>Email</label>
+
+              <input type="email" id="email" placeholder="Enter your email" />
+
+              <small id="emailError"></small>
+            </div>
+
+            <div>
+              <label>Phone Number</label>
+
+              <input type="tel" id="phone" placeholder="Enter phone number" />
+
+              <small id="phoneError"></small>
+            </div>
+
+            <div>
+              <label>Company</label>
+
+              <input type="text" id="company" placeholder="Company name" />
+
+              <small id="companyError"></small>
+            </div>
+          </div>
+
+          <div class="mt-3">
+            <label>Message</label>
+
+            <textarea
+              id="message"
+              rows="6"
+              placeholder="Write your message"
+            ></textarea>
+
+            <small id="messageError"></small>
+          </div>
+
+          <div class="mt-3">
+            <button type="submit" class="primary-btn">Submit</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!--================ CONTACT INFORMATION =================-->
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading" data-aos="fade-up">
+          <span class="section-subtitle"> Contact Information </span>
+
+          <h2>We'd Love To Hear From You</h2>
+
+          <p>Reach out through any of the following channels.</p>
+        </div>
+
+        <div class="service-grid">
+          <div class="service-card" data-aos="zoom-in">
+            <i class="fa-solid fa-location-dot"></i>
+
+            <h3>Office Address</h3>
+
+            <p>
+              123 Business Avenue<br />
+
+              Hyderabad, Telangana<br />
+
+              India
+            </p>
+          </div>
+
+          <div class="service-card" data-aos="zoom-in" data-aos-delay="150">
+            <i class="fa-solid fa-phone"></i>
+
+            <h3>Phone</h3>
+
+            <p>
+              +91 98765 43210<br />
+
+              Mon - Fri
+            </p>
+          </div>
+
+          <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+            <i class="fa-solid fa-envelope"></i>
+
+            <h3>Email</h3>
+
+            <p>
+              info@stackly.com<br />
+
+              support@stackly.com
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--================ BUSINESS HOURS =================-->
+
+    <section class="why section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-subtitle"> Business Hours </span>
+
+          <h2>We're Available</h2>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card">
+            <h3>Monday - Friday</h3>
+
+            <p>9:00 AM - 6:00 PM</p>
+          </div>
+
+          <div class="why-card">
+            <h3>Saturday</h3>
+
+            <p>10:00 AM - 4:00 PM</p>
+          </div>
+
+          <div class="why-card">
+            <h3>Sunday</h3>
+
+            <p>Closed</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--================ WHY CONTACT US =================-->
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-subtitle"> Why Choose Stackly </span>
+
+          <h2>Our Commitment</h2>
+        </div>
+
+        <div class="service-grid">
+          <div class="service-card">
+            <i class="fa-solid fa-headset"></i>
+
+            <h3>Quick Support</h3>
+
+            <p>Fast responses to all customer inquiries.</p>
+          </div>
+
+          <div class="service-card">
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <h3>Trusted Solutions</h3>
+
+            <p>Secure, reliable and scalable applications.</p>
+          </div>
+
+          <div class="service-card">
+            <i class="fa-solid fa-users"></i>
+
+            <h3>Expert Team</h3>
+
+            <p>Skilled professionals delivering quality work.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--================ FAQ =================-->
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading" data-aos="fade-up">
+          <span class="section-subtitle"> FAQ </span>
+
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div class="service-grid">
+          <div class="service-card">
+            <h3>How soon will you reply?</h3>
+
+            <p>We usually respond within 24 business hours.</p>
+          </div>
+
+          <div class="service-card">
+            <h3>Do you build custom websites?</h3>
+
+            <p>Yes. Every project is tailored to business requirements.</p>
+          </div>
+
+          <div class="service-card">
+            <h3>Do you provide maintenance?</h3>
+
+            <p>Yes, we offer post-launch support and maintenance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--================ CTA =================-->
+
+    <section class="cta section">
+      <div class="container">
+        <h2>Let's Work Together</h2>
+
+        <p>We'd love to discuss your next project.</p>
+
+        <a href="contact.html" class="primary-btn"> Get Started </a>
+      </div>
+    </section>
+
+    <!--================ FOOTER =================-->
+
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-col">
+          <div class="logo">
+            <a href="index.html">
+              <img src="images/website-logo.png" alt="stackly-logo" />
+            </a>
+          </div>
+
+          <p>Building modern digital experiences for businesses worldwide.</p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+
+          <ul>
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="services.html">Services</a></li>
+
+            <li><a href="portfolio.html">Portfolio</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Services</h3>
+
+          <ul>
+            <li><a href="services.html">Web Development</a></li>
+
+            <li><a href="services.html">Frontend Development</a></li>
+
+            <li><a href="services.html">UI / UX</a></li>
+
+            <li><a href="services.html">Consulting</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Follow Us</h3>
+
+          <div class="social-links">
+            <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+
+            <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
+
+            <a href="404.html"><i class="fab fa-instagram"></i></a>
+
+            <a href="404.html"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Stackly. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 1000,
+
+        once: true,
+
+        offset: 120,
+      });
+    </script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

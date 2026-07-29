@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>404 | Page Not Found</title>
+
+    <meta
+      name="description"
+      content="The page you are looking for cannot be found."
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  </head>
+
+  <body>
+    <section class="error-page">
+      <div class="container error-container">
+        <div class="error-image" data-aos="fade-right">
+          <img src="images/404/404.jfif" alt="404 Error" />
+        </div>
+
+        <div class="error-content" data-aos="fade-left">
+          <h1>404</h1>
+
+          <h2>Oops! Page Not Found</h2>
+
+          <p>
+            The page you are trying to access doesn't exist or has been moved.
+          </p>
+
+          <div class="error-buttons">
+            <a href="index.html" class="primary-btn">
+              <i class="fa-solid fa-house"></i>
+
+              Back To Home
+            </a>
+
+            <button class="secondary-btn" onclick="history.back()">
+              <i class="fa-solid fa-arrow-left"></i>
+
+              Go Back
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 1000,
+
+        once: true,
+      });
+    </script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
