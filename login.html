@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Login | Stackly</title>
+
+    <meta name="description" content="Login to Stackly" />
+
+    <meta name="keywords" content="Stackly Login" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="stylesheet" href="css/auth.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <section class="auth">
+      <div class="auth-container">
+        <!--================ LEFT =================-->
+
+        <div class="auth-left" data-aos="fade-right">
+          <div class="auth-overlay">
+            <img
+              src="images/website-logo.webp"
+              class="auth-logo"
+              alt="Stackly Logo"
+            />
+
+            <span class="badge">
+              <i class="fa-solid fa-circle-check"></i>
+
+              Secure Login Portal
+            </span>
+
+            <h1>Welcome Back!</h1>
+
+            <p>
+              Sign in to continue managing your projects, team collaboration and
+              enterprise solutions.
+            </p>
+
+            <div class="feature">
+              <i class="fa-solid fa-lock"></i>
+
+              <span> Secure Authentication </span>
+            </div>
+
+            <div class="feature">
+              <i class="fa-solid fa-cloud"></i>
+
+              <span> Cloud Based Platform </span>
+            </div>
+
+            <div class="feature">
+              <i class="fa-solid fa-chart-line"></i>
+
+              <span> Real-Time Dashboard </span>
+            </div>
+          </div>
+        </div>
+
+        <!--================ RIGHT =================-->
+
+        <div class="auth-right" data-aos="fade-left">
+          <h2>Login</h2>
+
+          <p>Welcome back! Please login to continue.</p>
+
+          <form id="loginForm" novalidate>
+            <!-- EMAIL -->
+
+            <div class="form-group">
+              <label>
+                Email Address
+
+                <span>*</span>
+              </label>
+
+              <div class="input-box">
+                <i class="fa-regular fa-envelope"></i>
+
+                <input
+                  type="email"
+                  id="loginEmail"
+                  placeholder="name@example.com"
+                />
+              </div>
+
+              <small class="error" id="loginEmailError"></small>
+            </div>
+
+            <!-- ROLE -->
+
+            <div class="form-group">
+              <label>
+                Select Role
+
+                <span>*</span>
+              </label>
+
+              <div class="role-selector">
+                <label>
+                  <input type="radio" name="loginRole" value="Client" />
+
+                  <span>Client</span>
+                </label>
+
+                <label>
+                  <input type="radio" name="loginRole" value="Admin" />
+
+                  <span>Admin</span>
+                </label>
+              </div>
+
+              <small class="error" id="loginRoleError"></small>
+            </div>
+
+            <!-- PASSWORD -->
+
+            <div class="form-group">
+              <label>
+                Password
+
+                <span>*</span>
+              </label>
+
+              <div class="input-box">
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                  type="password"
+                  id="loginPassword"
+                  placeholder="Enter Password"
+                />
+
+                <i
+                  class="fa-regular fa-eye toggle-password"
+                  data-target="loginPassword"
+                ></i>
+              </div>
+
+              <small class="error" id="loginPasswordError"></small>
+            </div>
+
+            <!-- OPTIONS -->
+
+            <div class="auth-options">
+              <a href="forgot-password.html"> Forgot Password? </a>
+            </div>
+
+            <button type="submit" class="auth-btn">
+              Login
+
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+            <p class="switch-page">
+              Don't have an account?
+
+              <a href="signup.html"> Create Account </a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div id="toastContainer"></div>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 900,
+
+        once: true,
+      });
+    </script>
+
+    <script src="js/auth.js"></script>
+  </body>
+</html>
