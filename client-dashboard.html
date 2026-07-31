@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Stackly | Client Dashboard</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/client-dashboard.css" />
+  </head>
+
+  <body>
+    <div class="dashboard">
+      <!-- =======================================
+                SIDEBAR
+    ======================================== -->
+
+      <aside class="sidebar">
+        <div class="logo">
+          <img src="images/website-logo.webp" alt="Stackly Logo" />
+        </div>
+
+        <ul class="menu">
+          <li class="active">
+            <a href="#" data-page="dashboard">
+              <i class="fa-solid fa-house"></i>
+
+              <span>Dashboard</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" data-page="projects">
+              <i class="fa-solid fa-folder-open"></i>
+
+              <span>My Projects</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" data-page="tasks">
+              <i class="fa-solid fa-list-check"></i>
+
+              <span>Tasks</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" data-page="invoices">
+              <i class="fa-solid fa-file-invoice-dollar"></i>
+
+              <span>Invoices</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" data-page="messages">
+              <i class="fa-solid fa-comments"></i>
+
+              <span>Messages</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" data-page="profile">
+              <i class="fa-solid fa-user"></i>
+
+              <span>Profile</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" data-page="settings">
+              <i class="fa-solid fa-gear"></i>
+
+              <span>Settings</span>
+            </a>
+          </li>
+        </ul>
+
+        <button class="logout-btn">
+          <i class="fa-solid fa-right-from-bracket"></i>
+
+          Logout
+        </button>
+      </aside>
+
+      <!-- =======================================
+                MAIN CONTENT
+    ======================================== -->
+
+      <main class="main-content">
+        <!-- Header -->
+
+        <header class="top-header">
+          <button id="menuToggle" class="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+          <div class="header-title">
+            <h2 id="pageTitle">Dashboard</h2>
+
+            <p>
+              Welcome back,
+
+              <span id="userEmail"> client@stackly.com </span>
+            </p>
+          </div>
+
+          <div class="header-right">
+            <div class="search-box">
+              <i class="fa-solid fa-magnifying-glass"></i>
+
+              <input type="text" placeholder="Search here..." />
+            </div>
+
+            <button class="notification-btn">
+              <i class="fa-solid fa-bell"></i>
+            </button>
+
+            <div class="icon-btn">
+              <i class="fa-solid fa-user"></i>
+            </div>
+          </div>
+        </header>
+
+        <!-- =======================================
+                CONTENT AREA
+        ======================================== -->
+
+        <section id="dashboardContent">
+          <!-- ===========================
+                    DASHBOARD
+            ============================ -->
+
+          <div class="page dashboard-page">
+            <!-- Welcome Banner -->
+
+            <div class="welcome-card">
+              <div>
+                <h1>Welcome Back 👋</h1>
+
+                <p>
+                  Track your projects, tasks, invoices and communication from
+                  one place.
+                </p>
+              </div>
+
+              <button class="primary-btn">View Projects</button>
+            </div>
+
+            <!-- Statistics -->
+
+            <div class="stats-grid">
+              <div class="stat-card">
+                <i class="fa-solid fa-folder-open"></i>
+
+                <h2>08</h2>
+
+                <p>Active Projects</p>
+              </div>
+
+              <div class="stat-card">
+                <i class="fa-solid fa-list-check"></i>
+
+                <h2>15</h2>
+
+                <p>Pending Tasks</p>
+              </div>
+
+              <div class="stat-card">
+                <i class="fa-solid fa-circle-check"></i>
+
+                <h2>124</h2>
+
+                <p>Completed Tasks</p>
+              </div>
+
+              <div class="stat-card">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+
+                <h2>05</h2>
+
+                <p>Invoices</p>
+              </div>
+            </div>
+
+            <!-- Recent Projects -->
+
+            <!-- Upcoming Tasks -->
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="js/client-dashboard.js"></script>
+  </body>
+</html>

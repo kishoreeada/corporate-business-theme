@@ -1,90 +1,344 @@
-// Mobile Menu
-const menuBtn = document.querySelector(".menu-btn");
-const navLinks = document.querySelector(".nav-links");
+/*========================================
+  ELEMENTS
+========================================*/
 
-if (menuBtn && navLinks) {
-  menuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
+const content = document.getElementById("dashboardContent");
+const pageTitle = document.getElementById("pageTitle");
+const userEmail = document.getElementById("userEmail");
 
-  document.querySelectorAll(".nav-links a").forEach((link) => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("active");
-    });
-  });
+const menuLinks = document.querySelectorAll(".menu a");
+const sidebar = document.querySelector(".sidebar");
+const menuToggle = document.getElementById("menuToggle");
+const logoutBtn = document.querySelector(".logout-btn");
+
+/*========================================
+  USER EMAIL
+========================================*/
+
+const email = localStorage.getItem("userEmail");
+
+if (email) {
+  userEmail.textContent = email;
 }
 
-// Sticky Header Shadow
-const header = document.querySelector(".header");
+/*========================================
+  PAGES
+========================================*/
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 50) {
-    header.style.boxShadow = "0 10px 25px rgba(0,0,0,.12)";
-  } else {
-    header.style.boxShadow = "0 5px 20px rgba(0,0,0,.08)";
-  }
-});
+const pages = {
+  overview: `
 
-// Current Year (optional)
-const year = document.getElementById("year");
-if (year) {
-  year.textContent = new Date().getFullYear();
+<div class="welcome-card">
+
+<div>
+
+<h1>Operations Control Center</h1>
+
+<p>
+Monitor projects, manage clients and analyze business performance.
+</p>
+
+</div>
+
+<button class="primary-btn">
+
++ Create Project
+
+</button>
+
+</div>
+
+<div class="stats-grid">
+
+<div class="stat-card">
+
+<h2>48</h2>
+
+<p>Total Projects</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2>126</h2>
+
+<p>Clients</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2>324</h2>
+
+<p>Tasks</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2>92%</h2>
+
+<p>Performance</p>
+
+</div>
+
+</div>
+
+`,
+
+  projects: `
+
+<div class="page-header">
+
+    <h2>Project Management</h2>
+
+    <button class="primary-btn">
+        + New Project
+    </button>
+
+</div>
+
+<div class="stats-grid">
+
+    <div class="stat-card">
+
+        <h2>18</h2>
+
+        <p>Running Projects</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h2>7</h2>
+
+        <p>Completed</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h2>4</h2>
+
+        <p>Pending Review</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h2>96%</h2>
+
+        <p>Success Rate</p>
+
+    </div>
+
+</div>
+
+`,
+
+  clients: `
+
+<div class="page-header">
+
+<h2>Client Management</h2>
+
+<button class="primary-btn">
+
++ Add Client
+
+</button>
+
+</div>
+
+<div class="stats-grid">
+
+<div class="stat-card">
+
+<h2>126</h2>
+
+<p>Total Clients</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2>98</h2>
+
+<p>Active Clients</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2>15</h2>
+
+<p>New This Month</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2>4.9★</h2>
+
+<p>Client Rating</p>
+
+</div>
+
+</div>
+
+`,
+
+  reports: `
+
+<div class="page-header">
+
+<h2>Business Reports</h2>
+
+<button class="primary-btn">
+
+Download PDF
+
+</button>
+
+</div>
+
+<div class="stats-grid">
+
+<div class="stat-card">
+
+<h2>$48K</h2>
+
+<p>Revenue</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2>320</h2>
+
+<p>Orders</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2>185</h2>
+
+<p>Invoices</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2>82%</h2>
+
+<p>Growth</p>
+
+</div>
+
+</div>
+
+`,
+
+  settings: `
+
+<div class="page-header">
+
+<h2>Account Settings</h2>
+
+<button class="primary-btn">
+
+Save Changes
+
+</button>
+
+</div>
+
+<div class="settings-box">
+
+<div>
+
+<label>Full Name</label>
+
+<input type="text" value="Administrator">
+
+</div>
+
+<div>
+
+<label>Email</label>
+
+<input type="email" value="admin@stackly.com">
+
+</div>
+
+<div>
+
+<label>Password</label>
+
+<input type="password" value="********">
+
+</div>
+
+</div>
+
+`,
+};
+
+/*========================================
+  LOAD PAGE
+========================================*/
+
+function loadPage(pageName, title) {
+  pageTitle.textContent = title;
+
+  content.innerHTML = pages[pageName];
 }
 
-/*================ CONTACT FORM =================*/
+/*========================================
+  DEFAULT PAGE
+========================================*/
 
-const contactForm = document.getElementById("contact-form");
+loadPage("overview", "Dashboard Overview");
 
-if (contactForm) {
-  contactForm.addEventListener("submit", function (e) {
+/*========================================
+  SIDEBAR MENU
+========================================*/
+
+menuLinks.forEach((link) => {
+  link.addEventListener("click", function (e) {
     e.preventDefault();
 
-    let valid = true;
+    document.querySelector(".menu .active")?.classList.remove("active");
 
-    const name = document.getElementById("name");
-    const email = document.getElementById("email");
-    const phone = document.getElementById("phone");
-    const company = document.getElementById("company");
-    const message = document.getElementById("message");
+    this.parentElement.classList.add("active");
 
-    document.getElementById("nameError").textContent = "";
-    document.getElementById("emailError").textContent = "";
-    document.getElementById("phoneError").textContent = "";
-    document.getElementById("companyError").textContent = "";
-    document.getElementById("messageError").textContent = "";
+    const page = this.dataset.page;
 
-    if (name.value.trim() == "") {
-      document.getElementById("nameError").textContent = "Name is required";
-      valid = false;
-    }
+    const title = this.querySelector("span").textContent;
 
-    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    loadPage(page, title);
 
-    if (!email.value.match(emailPattern)) {
-      document.getElementById("emailError").textContent = "Enter valid email";
-      valid = false;
-    }
-
-    if (phone.value.trim().length < 10) {
-      document.getElementById("phoneError").textContent =
-        "Enter valid phone number";
-      valid = false;
-    }
-
-    if (company.value.trim() == "") {
-      document.getElementById("companyError").textContent =
-        "Company name required";
-      valid = false;
-    }
-
-    if (message.value.trim().length < 10) {
-      document.getElementById("messageError").textContent =
-        "Minimum 10 characters required";
-      valid = false;
-    }
-
-    if (valid) {
-      window.location.href = "404.html";
+    if (window.innerWidth <= 768) {
+      sidebar.classList.remove("active");
     }
   });
-}
+});
+
+/*========================================
+  MOBILE SIDEBAR
+========================================*/
+
+menuToggle.addEventListener("click", () => {
+  sidebar.classList.toggle("active");
+});
+
+/*========================================
+  LOGOUT
+========================================*/
+
+logoutBtn.addEventListener("click", () => {
+  localStorage.removeItem("userEmail");
+
+  window.location.href = "login.html";
+});

@@ -378,11 +378,6 @@ if (loginForm) {
 
       setTimeout(() => {
         switch (role) {
-          case "Developer":
-            window.location.href = "developer-dashboard.html";
-
-            break;
-
           case "Client":
             window.location.href = "client-dashboard.html";
 
