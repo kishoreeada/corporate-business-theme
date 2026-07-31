@@ -22,11 +22,15 @@ const logoutBtn = document.querySelector(".logout-btn");
                 USER EMAIL
 ==================================================*/
 
-const email = localStorage.getItem("userEmail") || "client@stackly.com";
+// const email = localStorage.getItem("userEmail") || "client@stackly.com";
 
-userEmail.textContent = email;
+// if (userEmail) {
+//   userEmail.textContent = email;
+// }
 
-profileEmail.textContent = email;
+// if (profileEmail) {
+//   profileEmail.textContent = email;
+// }
 
 /*==================================================
                 DASHBOARD PAGES
@@ -389,7 +393,7 @@ Friday
 
         <input
             type="email"
-            value="${email}">
+           
 
     </div>
 
@@ -482,7 +486,7 @@ function loadPage(pageName, titleText) {
             DEFAULT PAGE
 ==================================================*/
 
-loadPage("dashboard", "Dashboard");
+loadPage("dashboard", "Client Dashboard");
 
 /*==================================================
             SIDEBAR NAVIGATION

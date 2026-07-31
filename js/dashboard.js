@@ -15,13 +15,13 @@ const logoutBtn = document.querySelector(".logout-btn");
     USER EMAIL
 =========================================*/
 
-const email = localStorage.getItem("userEmail");
+// const email = localStorage.getItem("userEmail");
 
-if (email) {
-  userEmail.textContent = email;
-} else {
-  userEmail.textContent = "admin@stackly.com";
-}
+// if (email) {
+//   userEmail.textContent = email;
+// } else {
+//   userEmail.textContent = "admin@stackly.com";
+// }
 
 /*=========================================
     DASHBOARD PAGES
@@ -219,7 +219,7 @@ const pages = {
 
         <input
             type="email"
-            value="${email || "admin@stackly.com"}"
+            
         >
 
     </div>
@@ -254,7 +254,7 @@ function loadPage(pageName, titleText) {
     DEFAULT PAGE
 =========================================*/
 
-loadPage("overview", "Dashboard Overview");
+loadPage("overview", "Admin Dashboard");
 
 /*=========================================
     SIDEBAR MENU

@@ -1203,7 +1203,6 @@ textarea {
 
 .footer-logo img {
   width: 170px;
-  margin-bottom: 20px;
 }
 
 .footer-col p {
@@ -1267,7 +1266,6 @@ textarea {
 }
 
 .newsletter input {
-  flex: 1;
   height: 48px;
   border: none;
   outline: none;

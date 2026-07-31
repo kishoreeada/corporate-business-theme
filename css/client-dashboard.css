@@ -82,8 +82,8 @@ body {
 
 .logo {
   text-align: center;
-
-  margin-bottom: 40px;
+   margin-left: 10px; 
+  margin-right: auto;
 }
 
 .logo img {
@@ -765,8 +765,6 @@ table tbody tr:hover {
   }
 
   .top-header {
-    flex-wrap: wrap;
-
     padding: 20px;
   }
 
@@ -779,11 +777,7 @@ table tbody tr:hover {
   }
 
   .header-right {
-    width: 100%;
-
-    justify-content: space-between;
-
-    flex-wrap: wrap;
+    /* justify-content: space-between; */
   }
 
   .search-box {
@@ -828,5 +822,82 @@ table tbody tr:hover {
 
   .top-header {
     gap: 15px;
+  }
+  .top-header h2 {
+    font-size: 12px;
+    width: 120%;
+  }
+
+  .logo img {
+    width: 100px;
+    margin-bottom: 30px;
+  }
+}
+
+/* ========== */
+/*=========================================
+        CLOSE SIDEBAR BUTTON
+=========================================*/
+
+.close-sidebar {
+  display: none;
+
+  position: absolute;
+
+  top: 15px;
+
+  right: 15px;
+
+  width: 40px;
+
+  height: 40px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  color: var(--secondary);
+
+  cursor: pointer;
+
+  font-size: 20px;
+
+  transition: 0.3s;
+}
+
+.close-sidebar:hover {
+  background: #ef4444;
+
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+
+    top: 0;
+
+    left: -280px;
+
+    width: 260px;
+
+    height: 100vh;
+
+    z-index: 1000;
+
+    transition: 0.35s;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .close-sidebar {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
   }
 }
