@@ -18,6 +18,8 @@ const menuLinks = document.querySelectorAll(".menu a");
 
 const logoutBtn = document.querySelector(".logout-btn");
 
+const closeSidebar = document.getElementById("closeSidebar");
+
 /*==================================================
                 USER EMAIL
 ==================================================*/
@@ -523,6 +525,12 @@ menuLinks.forEach((link) => {
 if (menuToggle) {
   menuToggle.addEventListener("click", () => {
     sidebar.classList.toggle("active");
+  });
+}
+
+if (closeSidebar) {
+  closeSidebar.addEventListener("click", () => {
+    sidebar.classList.remove("active");
   });
 }
 

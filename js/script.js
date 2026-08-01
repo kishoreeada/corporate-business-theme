@@ -11,13 +11,20 @@ const sidebar = document.querySelector(".sidebar");
 const menuToggle = document.getElementById("menuToggle");
 const logoutBtn = document.querySelector(".logout-btn");
 
+const navMenuToggle = document.getElementById("navMenuToggle");
+const navMobileMenu = document.getElementById("navMobileMenu");
+const closeMenu = document.getElementById("closeMenu");
+const overlay = document.getElementById("mobileOverlay");
+
+const isDashboardPage = content && pageTitle;
+
 /*========================================
   USER EMAIL
 ========================================*/
 
 const email = localStorage.getItem("userEmail");
 
-if (email) {
+if (isDashboardPage && email && userEmail) {
   userEmail.textContent = email;
 }
 
@@ -299,46 +306,86 @@ function loadPage(pageName, title) {
   DEFAULT PAGE
 ========================================*/
 
-loadPage("overview", "Dashboard Overview");
+if (isDashboardPage) {
+  loadPage("overview", "Dashboard Overview");
 
-/*========================================
-  SIDEBAR MENU
-========================================*/
+  /*========================================
+    SIDEBAR MENU
+  ========================================*/
 
-menuLinks.forEach((link) => {
-  link.addEventListener("click", function (e) {
-    e.preventDefault();
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
 
-    document.querySelector(".menu .active")?.classList.remove("active");
+      document.querySelector(".menu .active")?.classList.remove("active");
 
-    this.parentElement.classList.add("active");
+      this.parentElement.classList.add("active");
 
-    const page = this.dataset.page;
+      const page = this.dataset.page;
 
-    const title = this.querySelector("span").textContent;
+      const title = this.querySelector("span").textContent;
 
-    loadPage(page, title);
+      loadPage(page, title);
 
-    if (window.innerWidth <= 768) {
-      sidebar.classList.remove("active");
-    }
+      if (window.innerWidth <= 768) {
+        sidebar.classList.remove("active");
+      }
+    });
   });
-});
 
-/*========================================
-  MOBILE SIDEBAR
-========================================*/
+  /*========================================
+    MOBILE SIDEBAR
+  ========================================*/
 
-menuToggle.addEventListener("click", () => {
-  sidebar.classList.toggle("active");
-});
+  menuToggle?.addEventListener("click", () => {
+    sidebar.classList.toggle("active");
+  });
 
-/*========================================
-  LOGOUT
-========================================*/
+  /*========================================
+    LOGOUT
+  ========================================*/
 
-logoutBtn.addEventListener("click", () => {
-  localStorage.removeItem("userEmail");
+  logoutBtn?.addEventListener("click", () => {
+    localStorage.removeItem("userEmail");
 
-  window.location.href = "login.html";
-});
+    window.location.href = "login.html";
+  });
+}
+
+if (!isDashboardPage) {
+  document.querySelectorAll(".mobile-menu a").forEach((link) => {
+    link.onclick = () => {
+      navMobileMenu?.classList.remove("active");
+
+      overlay?.classList.remove("active");
+    };
+  });
+}
+
+if (navMenuToggle && navMobileMenu && closeMenu && overlay) {
+  navMenuToggle.onclick = () => {
+    navMobileMenu.classList.add("active");
+
+    overlay.classList.add("active");
+  };
+
+  closeMenu.onclick = () => {
+    navMobileMenu.classList.remove("active");
+
+    overlay.classList.remove("active");
+  };
+
+  overlay.onclick = () => {
+    navMobileMenu.classList.remove("active");
+
+    overlay.classList.remove("active");
+  };
+
+  document.querySelectorAll(".mobile-menu a").forEach((link) => {
+    link.onclick = () => {
+      navMobileMenu.classList.remove("active");
+
+      overlay.classList.remove("active");
+    };
+  });
+}

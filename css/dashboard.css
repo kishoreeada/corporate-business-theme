@@ -396,12 +396,49 @@ button {
     width: 170px;
   }
 }
+/*=========================================
+        CLOSE SIDEBAR BUTTON
+=========================================*/
 
+.close-sidebar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  top: 35px;
+
+  right: 15px;
+
+  width: 30px;
+
+  height: 30px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  color: var(--primary);
+
+  cursor: pointer;
+
+  font-size: 20px;
+
+  transition: 0.3s;
+}
+
+.close-sidebar:hover {
+  background: #ef4444;
+
+  color: #fff;
+}
 /*========================================
   MOBILE
 ========================================*/
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .dashboard {
     display: block;
   }
@@ -460,6 +497,12 @@ button {
 
   .stats-grid {
     grid-template-columns: 1fr;
+  }
+  .logo {
+    margin-right: auto;
+  }
+  .logo img {
+    width: 120px;
   }
 }
 
@@ -522,6 +565,9 @@ SETTINGS
 
   font-size: 15px;
 }
-.logo img {
-  /* background: #fff; */
+
+@media (min-width: 768px) {
+  .close-sidebar {
+    display: none;
+  }
 }

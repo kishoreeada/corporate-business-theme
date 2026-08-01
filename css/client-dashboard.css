@@ -82,7 +82,7 @@ body {
 
 .logo {
   text-align: center;
-   margin-left: 10px; 
+  margin-left: 10px;
   margin-right: auto;
 }
 
@@ -776,10 +776,6 @@ table tbody tr:hover {
     align-items: center;
   }
 
-  .header-right {
-    /* justify-content: space-between; */
-  }
-
   .search-box {
     width: 100%;
   }
@@ -800,6 +796,13 @@ table tbody tr:hover {
 
   .profile-box div {
     display: none;
+  }
+
+  .logo {
+    margin-right: auto;
+  }
+  .logo img {
+    width: 120px;
   }
 }
 
@@ -844,13 +847,13 @@ table tbody tr:hover {
 
   position: absolute;
 
-  top: 15px;
+  top: 35px;
 
   right: 15px;
 
-  width: 40px;
+  width: 30px;
 
-  height: 40px;
+  height: 30px;
 
   border: none;
 
