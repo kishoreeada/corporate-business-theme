@@ -44,8 +44,13 @@ ul {
 ======================================*/
 
 .container {
-  width: min(1200px, 90%);
-  margin: auto;
+  width: 100%;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 0 16px;
 }
 
 .section {
@@ -1357,27 +1362,16 @@ textarea {
 
 .mobile-menu {
   position: fixed;
-
   top: 0;
-
   right: -320px;
-
   width: 300px;
-
   height: 100vh;
-
   background: #fff;
-
   transition: 0.35s;
-
   z-index: 1000;
-
   display: flex;
-
   flex-direction: column;
-
   padding: 25px;
-
   box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
 }
 
@@ -1475,7 +1469,7 @@ textarea {
 .mobile-overlay.active {
   opacity: 1;
 
-  visibility: visible;
+  /* visibility: visible; */
 }
 .newsletter-error {
   color: #ff4d4f !important;
@@ -1485,4 +1479,14 @@ textarea {
   margin-top: 8px;
 
   display: none;
+}
+
+.hero,
+.about,
+.services,
+.why,
+.portfolio,
+.cta,
+.footer {
+  overflow: hidden;
 }
