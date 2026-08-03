@@ -147,7 +147,7 @@ ul {
 
   left: 0;
 
-  width: 100%;
+  width: 100vw;
 
   background: #fff;
 
@@ -916,6 +916,12 @@ MOBILE
   .social-links {
     justify-content: center;
   }
+}
+.hero-container,
+.about-container {
+  grid-template-columns: 1fr;
+
+  gap: 40px;
 }
 
 /*======================================
