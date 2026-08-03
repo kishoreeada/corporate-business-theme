@@ -389,3 +389,35 @@ if (navMenuToggle && navMobileMenu && closeMenu && overlay) {
     };
   });
 }
+
+/*====================================
+        NEWSLETTER VALIDATION
+====================================*/
+
+const newsletterForm = document.getElementById("newsletterForm");
+
+if (newsletterForm) {
+  const newsletterEmail = document.getElementById("newsletterEmail");
+
+  const newsletterError = document.getElementById("newsletterError");
+
+  newsletterForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const email = newsletterEmail.value.trim();
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (email === "" || !emailRegex.test(email)) {
+      newsletterError.style.display = "block";
+
+      newsletterError.textContent = "Please enter a valid email address.";
+
+      return;
+    }
+
+    newsletterError.style.display = "none";
+
+    window.location.href = "404.html";
+  });
+}

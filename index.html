@@ -69,9 +69,9 @@
         </ul>
 
         <div class="nav-buttons">
-          <a href="signup.html" class="login-btn"> Sign up </a>
+          <a href="signup.html" class="login-btn"> Sign Up </a>
 
-          <a href="contact.html" class="primary-btn"> Get Started </a>
+          <a href="404.html" class="primary-btn"> Get Started </a>
         </div>
 
         <div class="menu-btn" id="navMenuToggle">
@@ -104,7 +104,7 @@
           <li><a href="login.html">Sign up</a></li>
         </ul>
 
-        <a href="signup.html" class="mobile-btn"> Get Started </a>
+        <a href="404.html" class="mobile-btn"> Get Started </a>
       </div>
 
       <div class="mobile-overlay" id="mobileOverlay"></div>
@@ -125,9 +125,9 @@
           </p>
 
           <div class="hero-buttons">
-            <a href="services.html" class="primary-btn"> Explore Services </a>
+            <a href="404.html" class="primary-btn"> Explore Services </a>
 
-            <a href="contact.html" class="secondary-btn"> Contact Us </a>
+            <a href="404.html" class="secondary-btn"> Contact Us </a>
           </div>
         </div>
 
@@ -177,7 +177,7 @@
             </li>
           </ul>
 
-          <a href="about.html" class="primary-btn"> Read More </a>
+          <a href="404.html" class="primary-btn"> Read More </a>
         </div>
       </div>
     </section>
@@ -207,7 +207,7 @@
               Modern responsive websites built with the latest technologies.
             </p>
 
-            <a href="services.html"> Learn More </a>
+            <a href="404.html"> Learn More </a>
           </div>
 
           <div class="service-card" data-aos="zoom-in" data-aos-delay="150">
@@ -217,7 +217,7 @@
 
             <p>Interactive user interfaces using HTML, CSS and JavaScript.</p>
 
-            <a href="services.html"> Learn More </a>
+            <a href="404.html"> Learn More </a>
           </div>
 
           <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
@@ -227,7 +227,7 @@
 
             <p>Beautiful user experiences focused on usability.</p>
 
-            <a href="services.html"> Learn More </a>
+            <a href="404.html"> Learn More </a>
           </div>
         </div>
       </div>
@@ -292,7 +292,7 @@
 
               <p>Responsive website for a finance company.</p>
 
-              <a href="portfolio.html"> View Project </a>
+              <a href="404.html"> View Project </a>
             </div>
           </div>
 
@@ -304,7 +304,7 @@
 
               <p>Interactive dashboard for enterprise clients.</p>
 
-              <a href="portfolio.html"> View Project </a>
+              <a href="404.html"> View Project </a>
             </div>
           </div>
 
@@ -316,7 +316,7 @@
 
               <p>High-converting landing page for a SaaS startup.</p>
 
-              <a href="portfolio.html"> View Project </a>
+              <a href="404.html"> View Project </a>
             </div>
           </div>
         </div>
@@ -335,7 +335,7 @@
         </p>
 
         <a
-          href="contact.html"
+          href="404.html"
           class="primary-btn"
           data-aos="zoom-in"
           data-aos-delay="300"
@@ -417,12 +417,17 @@
 
           <p>Subscribe to receive product updates and technology insights.</p>
 
-          <div class="newsletter">
-            <input type="email" placeholder="Enter your email" />
+          <form class="newsletter" id="newsletterForm">
+            <input
+              type="email"
+              id="newsletterEmail"
+              placeholder="Enter your email"
+            />
 
-            <button>Join</button>
-          </div>
+            <button type="submit" class="join-btn">Join</button>
+          </form>
 
+          <p id="newsletterError" class="newsletter-error"></p>
           <div class="footer-contact">
             <p>
               <i class="fa-solid fa-phone"></i>

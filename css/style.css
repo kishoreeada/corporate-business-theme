@@ -181,15 +181,13 @@ ul {
 }
 
 .nav-links a {
-
- display: flex;
+  display: flex;
   padding: 10px;
   color: #222;
 
   font-weight: 500;
 
   position: relative;
-
 
   /* transition:color 0.3s, */
 }
@@ -200,9 +198,7 @@ ul {
   border-radius: 10px;
 }
 
-
 .nav-links a:hover {
-
   left: 0;
 
   /* width: 100px; */
@@ -210,7 +206,7 @@ ul {
   /* height: 50px; */
 
   background: #2dd4f1;
-color:#fff;
+  color: #fff;
   border-radius: 10px;
 }
 
@@ -244,8 +240,6 @@ color:#fff;
   display: none;
 
   font-size: 28px;
-
-  cursor: pointer;
 }
 
 /*======================================
@@ -512,7 +506,6 @@ color:#fff;
 
 .service-card,
 .why-card {
-  cursor: pointer;
 }
 
 .service-card:hover i {
@@ -1035,7 +1028,7 @@ form textarea {
 
   font-size: 16px;
 
-  margin-top: 8px;
+  /* margin-top: 8px; */
 }
 
 form label {
@@ -1277,7 +1270,6 @@ textarea {
   color: #fff;
   padding: 0 22px;
   border-radius: 0 8px 8px 0;
-  cursor: pointer;
   transition: 0.3s;
 }
 
@@ -1412,8 +1404,6 @@ textarea {
 
   background: #f4f7fb;
 
-  cursor: pointer;
-
   font-size: 20px;
 }
 
@@ -1431,18 +1421,18 @@ textarea {
   text-decoration: none;
 
   color: #1e293b;
- padding: 10px 14px;
+  padding: 10px 14px;
 
   font-size: 18px;
 
   font-weight: 500;
-/* 
+  /* 
   transition:
     color 0.3s,
     background 0.3s; */
 }
 
-.mobile-menu a:hover{
+.mobile-menu a:hover {
   background: rgba(59, 12, 230, 0.863);
   border-radius: 12px;
   color: #fff;
@@ -1450,12 +1440,10 @@ textarea {
 .mobile-menu a.active {
   background: rgba(66, 106, 216, 0.863);
   border-radius: 12px;
- 
+
   color: #fff !important;
 
   text-align: center;
-
-  
 
   border-radius: 12px;
 
@@ -1483,4 +1471,12 @@ textarea {
 
   visibility: visible;
 }
+.newsletter-error {
+  color: #ff4d4f !important;
 
+  font-size: 13px;
+
+  margin-top: 8px;
+
+  display: none;
+}

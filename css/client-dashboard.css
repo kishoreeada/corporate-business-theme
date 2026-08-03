@@ -213,7 +213,9 @@ body {
 
   gap: 20px;
 }
-
+.header-right a {
+  color: var(--primary);
+}
 .icon-btn {
   display: flex;
   align-items: center;

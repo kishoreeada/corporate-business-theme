@@ -54,9 +54,9 @@
         </ul>
 
         <div class="nav-buttons">
-          <a href="login.html" class="login-btn"> Login </a>
+          <a href="signup.html" class="login-btn"> Sign Up </a>
 
-          <a href="contact.html" class="primary-btn"> Get Started </a>
+          <a href="404.html" class="primary-btn"> Get Started </a>
         </div>
 
         <div class="menu-btn" id="navMenuToggle">
@@ -81,10 +81,10 @@
           <li><a href="services.html">Services</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="contact.html" class="active">Contact</a></li>
-          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
         </ul>
 
-        <a href="signup.html" class="mobile-btn">Get Started</a>
+        <a href="404.html" class="mobile-btn">Get Started</a>
       </div>
 
       <div class="mobile-overlay" id="mobileOverlay"></div>
@@ -341,7 +341,7 @@
 
         <p>We'd love to discuss your next project.</p>
 
-        <a href="contact.html" class="primary-btn"> Get Started </a>
+        <a href="404.html" class="primary-btn"> Get Started </a>
       </div>
     </section>
 
@@ -388,7 +388,7 @@
 
             <li><a href="contact.html" class="active">Contact</a></li>
 
-            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
           </ul>
         </div>
 
@@ -417,11 +417,16 @@
 
           <p>Subscribe to receive product updates and technology insights.</p>
 
-          <div class="newsletter">
-            <input type="email" placeholder="Enter your email" />
+          <form class="newsletter" id="newsletterForm">
+            <input
+              type="email"
+              id="newsletterEmail"
+              placeholder="Enter your email"
+            />
 
-            <button>Join</button>
-          </div>
+            <button type="submit" class="join-btn">Join</button>
+          </form>
+          <p id="newsletterError" class="newsletter-error"></p>
 
           <div class="footer-contact">
             <p>
