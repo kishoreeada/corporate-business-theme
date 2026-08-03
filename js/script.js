@@ -421,3 +421,90 @@ if (newsletterForm) {
     window.location.href = "404.html";
   });
 }
+
+/*====================================
+        CONTACT FORM VALIDATION
+====================================*/
+
+const contactForm = document.getElementById("contact-form");
+
+if (contactForm) {
+  const name = document.getElementById("name");
+  const email = document.getElementById("email");
+  const phone = document.getElementById("phone");
+  const company = document.getElementById("company");
+  const message = document.getElementById("message");
+
+  const nameError = document.getElementById("nameError");
+  const emailError = document.getElementById("emailError");
+  const phoneError = document.getElementById("phoneError");
+  const companyError = document.getElementById("companyError");
+  const messageError = document.getElementById("messageError");
+
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    let isValid = true;
+
+    nameError.textContent = "";
+    emailError.textContent = "";
+    phoneError.textContent = "";
+    companyError.textContent = "";
+    messageError.textContent = "";
+
+    const nameRegex = /^[A-Za-z ]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^[0-9]{10}$/;
+
+    if (name.value.trim() === "") {
+      nameError.textContent = "Full name is required.";
+
+      isValid = false;
+    } else if (!nameRegex.test(name.value.trim())) {
+      nameError.textContent = "Only alphabets are allowed.";
+
+      isValid = false;
+    }
+
+    if (email.value.trim() === "") {
+      emailError.textContent = "Email is required.";
+
+      isValid = false;
+    } else if (!emailRegex.test(email.value.trim())) {
+      emailError.textContent = "Enter a valid email address.";
+
+      isValid = false;
+    }
+
+    if (phone.value.trim() === "") {
+      phoneError.textContent = "Phone number is required.";
+
+      isValid = false;
+    } else if (!phoneRegex.test(phone.value.trim())) {
+      phoneError.textContent = "Enter a valid 10-digit phone number.";
+
+      isValid = false;
+    }
+
+    if (company.value.trim() === "") {
+      companyError.textContent = "Company name is required.";
+
+      isValid = false;
+    }
+
+    if (message.value.trim() === "") {
+      messageError.textContent = "Message is required.";
+
+      isValid = false;
+    } else if (message.value.trim().length < 10) {
+      messageError.textContent =
+        "Message should contain at least 10 characters.";
+
+      isValid = false;
+    }
+
+    if (isValid) {
+      window.location.href = "404.html";
+    }
+  });
+}
