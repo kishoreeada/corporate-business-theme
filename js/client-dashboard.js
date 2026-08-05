@@ -57,7 +57,7 @@ const pages = {
 
     </div>
 
-    <button class="primary-btn">
+    <button class="primary-btn" onclick="window.location.href='404.html'">
 
         View Projects
 
@@ -409,7 +409,7 @@ Friday
 
     </div>
 
-    <button class="primary-btn">
+    <button class="primary-btn" onclick="window.location.href='404.html'">
 
         Save Profile
 
@@ -463,7 +463,7 @@ Friday
 
     </div>
 
-    <button class="primary-btn">
+    <button class="primary-btn" onclick="window.location.href='404.html'">
 
         Save Settings
 

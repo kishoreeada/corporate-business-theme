@@ -42,7 +42,7 @@ const pages = {
 
     </div>
 
-    <button class="primary-btn">
+    <button class="primary-btn" onclick="window.location.href='404.html'">
         + Create Project
     </button>
 
@@ -80,7 +80,7 @@ const pages = {
 
     <h2>Project Management</h2>
 
-    <button class="primary-btn">
+    <button class="primary-btn" onclick="window.location.href='404.html'">
         + New Project
     </button>
 
@@ -118,7 +118,7 @@ const pages = {
 
     <h2>Client Management</h2>
 
-    <button class="primary-btn">
+    <button class="primary-btn" onclick="window.location.href='404.html'">
         + Add Client
     </button>
 
@@ -156,7 +156,7 @@ const pages = {
 
     <h2>Business Reports</h2>
 
-    <button class="primary-btn">
+    <button class="primary-btn" onclick="window.location.href='404.html'">
         Download Report
     </button>
 
@@ -194,7 +194,7 @@ const pages = {
 
     <h2>Account Settings</h2>
 
-    <button class="primary-btn">
+    <button class="primary-btn" onclick="window.location.href='404.html'">
         Save Changes
     </button>
 
